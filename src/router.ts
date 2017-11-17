@@ -5,9 +5,6 @@ import { makeHot, reload } from './util/hot-reload';
 const homeComponent = () => import('./components/home').then(({ HomeComponent }) => HomeComponent);
 const aboutComponent = () => import('./components/about').then(({ AboutComponent }) => AboutComponent);
 const listComponent = () => import('./components/list').then(({ ListComponent }) => ListComponent);
-// const homeComponent = () => import(/* webpackChunkName: 'home' */'./components/home').then(({ HomeComponent }) => HomeComponent);
-// const aboutComponent = () => import(/* webpackChunkName: 'about' */'./components/about').then(({ AboutComponent }) => AboutComponent);
-// const listComponent = () => import(/* webpackChunkName: 'list' */'./components/list').then(({ ListComponent }) => ListComponent);
 
 if (process.env.ENV === 'development' && module.hot) {
   const homeModuleId = './components/home';

@@ -1,0 +1,16 @@
+.container {
+  &-fluid > [class^="container"] {
+    height: 100vh
+  }
+
+  &-sidebar {
+    float: left;
+    width: 20vw;
+    background-color: #fae3c4;
+  }
+
+  &-body {
+    margin-left: 21vw;
+    background-color: #957bbe;
+  }
+}

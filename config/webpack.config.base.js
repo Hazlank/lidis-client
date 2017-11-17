@@ -17,6 +17,7 @@ let config = {
     extensions: ['.ts', '.js', '.html'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      '@': 'src',
     }
   },
   module: {
