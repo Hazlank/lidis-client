@@ -2,7 +2,7 @@
 @import "common/var";
 
 
-@include b(search) {
+@include b(input) {
   position: relative;
   font-size: $--font-base;
   display: inline-block;

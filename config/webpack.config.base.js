@@ -16,9 +16,12 @@ let config = {
   resolve: {
     extensions: ['.ts', '.js', '.html'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': 'src',
-    }
+      'vue$': 'vue/dist/vue.esm.js'
+    },
+    modules: [
+      helpers.root('/src'),
+      'node_modules',
+    ]
   },
   module: {
     rules: [{
