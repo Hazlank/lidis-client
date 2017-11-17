@@ -1,0 +1,10 @@
+@import "mixin/bem";
+@import "common/var";
+
+
+@include b(search) {
+  position: relative;
+  font-size: $--font-base;
+  display: inline-block;
+  width: 100%;
+}

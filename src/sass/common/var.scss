@@ -1,0 +1,44 @@
+/**
+ * 基本色调
+ */
+$--color-primary: var(--main-color, "#ac87df") !default;
+$--color-text: #333 !default;
+
+/**
+ * Background
+ */
+$--background-color-base: #f5f7fa !default;
+
+/**
+ * 字号
+ */
+$--font-base-size: 13px !default;
+$--font-base: $--font-base-size;
+
+/**
+ * 层级
+ */
+$--index-popup: 99 !default;
+
+/**
+ * Border
+ */
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-color-base: #d8dce5 !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base
+  !default;
+$--border-radius-base: 4px !default;
+$--border-radius-small: 2px !default;
+$--border-radius-circle: 100% !default;
+
+/**
+ * Input
+ */
+
+$--input-font-size: $--font-base;
+$--input-color: $--color-text !default;
+$--input-width: 140px !default;
+$--input-height: 40px !default;
+$--input-border: $--border-base !default;
+$--input-border-radius: $--border-radius-base !default;
