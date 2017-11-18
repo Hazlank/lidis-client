@@ -1,3 +1,3 @@
 export interface State {
-  filterText: string
+  filterText: string;
 }

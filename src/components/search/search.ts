@@ -29,14 +29,15 @@ export class SearchComponent extends Vue {
     return Array.from(this.historySet);
   }
 
+  private pushHistory(newVal) {
+    this.historySet.add(newVal);
+  }
+
   public submit(filterText: string) {
     this.setFilterText(filterText);
     this.pushHistory(filterText);
     // Logger
-    console.log('[Getter] ' + this.filterText);
-  }
-  private pushHistory(newVal) {
-    this.historySet.add(newVal);
+    console.log(`[Getter]  ${this.filterText}`);
   }
 }
 
