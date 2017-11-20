@@ -1,8 +1,12 @@
 <div class="lidis-search">
   <div class="lidis-input">
-    <input class="lidis-input__inner" v-model="value" @blur="submit(value)" />
+    <i class="lidis-icon lidis-input__icon icon-search">X</i>
+    <input
+      class="lidis-input__inner"
+      placeholder="Filter"
+      v-model="value"
+      @blur="submit(value)" />
   </div>
   <div class="lidis-dropdown">
-
   </div>
 </div>

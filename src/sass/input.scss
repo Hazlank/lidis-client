@@ -4,7 +4,40 @@
 
 @include b(input) {
   position: relative;
-  font-size: $--font-base;
   display: inline-block;
-  width: 100%;
+  width: $--input-width;
+
+  @include e(inner) {
+    display: inline-block;
+    padding: $--input-padding;
+    box-sizing: border-box;
+    width: $--input-width;
+    height: $--input-height;
+    border: $--input-border;
+    border-radius: $--input-border-radius;
+    font-size: $--input-font-size;
+    color: $--input-color;
+
+    &:hover {
+      border-color: $--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
+  }
+
+  @include e(icon) {
+    position: absolute;
+    right: 0;
+    width: $--input-icon-width;
+    line-height: $--input-height;
+    text-align: center;
+    cursor: pointer;
+
+    + .lidis-input__inner {
+      padding-right: $--input-icon-width;
+    }
+  }
 }

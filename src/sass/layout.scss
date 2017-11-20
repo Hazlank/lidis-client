@@ -1,0 +1,24 @@
+// Need move to scss/components/layout or main
+.container {
+  &-fluid > [class^="container"] {
+    height: 100vh;
+    padding: none;
+    margin: none;
+  }
+
+  &-sidebar {
+    box-sizing: border-box;
+    padding: 20px;
+    float: left;
+    width: 20vw;
+    background-color: #fafafa;
+  }
+
+  &-body {
+    box-sizing: border-box;
+    padding: 20px;
+    margin-left: 20vw;
+    background-color: #fafafa;
+    border-left: 1px solid #ddd;
+  }
+}
