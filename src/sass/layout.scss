@@ -1,4 +1,7 @@
-// Need move to scss/components/layout or main
+// TODO:
+// 1. 间隔变量提取到var.scss
+// 2. 各模块区域样式细调
+// 3. 最小支持pad端的响应式
 .container {
   &-fluid > [class^="container"] {
     height: 100vh;
