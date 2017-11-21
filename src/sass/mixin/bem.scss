@@ -1,6 +1,7 @@
 // https://github.com/ElementUI/theme-chalk/blob/master/src/mixins/mixins.scss
 $namespace: 'lidis';
 $element-separator: '__';
+$modifier-separator: '.is-';
 /* BEM
  -------------------------- */
  @mixin b($block) {

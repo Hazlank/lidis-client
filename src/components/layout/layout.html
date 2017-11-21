@@ -1,13 +1,18 @@
-<div class="container-fluid">
-  <div class="container-sidebar">
-    <slot name="search-bar">
-      <div>Search Bar</div>
-    </slot>
-    <slot name="keys-manage">
-     <div>Keys Manage</div>
-    </slot>
+<div class="lidis-layout">
+  <div class="lidis-layout__sidebar">
+    <div class="lidis-layout__searchbar"><slot name="search-bar"/></div>
+    <div class="lidis-layout__keylist">
+      <slot name="keys-manage">
+        <div>
+          <div class="lidis-layout__controller">Maybe Some Controller Here...</div>
+          <div v-for="_ in 5" class="lidis-layout__mocklist">
+          </div>
+        </div>
+      </slot>
+    </div>
   </div>
-  <div class="container-body">
+  <div class="lidis-layout__panel">
+    <div class="lidis-layout__bg"></div>
     <slot name="editor">
       Show && Editor
     </slot>

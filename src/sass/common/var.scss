@@ -3,17 +3,24 @@
  */
 $--color-primary: #ac87df !default;
 $--color-text: #333 !default;
+$--color-gutter: #ece7f0 !default;
 
 /**
  * Background
  */
-$--background-color-base: #f5f7fa !default;
+$--background-color-base: #fcfcfc !default;
+$--background-color-high: rgb(243, 243, 243) !default;
 
 /**
  * 字号
  */
 $--font-base-size: 13px !default;
-$--font-base: $--font-base-size;
+$--font-base: $--font-base-size !default;
+
+/**
+ * 间距
+ */
+$--padding-base: 4px;
 
 /**
  * 层级
@@ -25,24 +32,26 @@ $--index-popup: 99 !default;
  */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-base: #d8dce5 !default;
+$--border-color-base: #e4d8e5 !default;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base
   !default;
+$--border-gutter: $--border-width-base $--border-style-base $--color-gutter;
 $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
+
 
 /**
  * Input
  */
 
-$--input-padding: 2px 6px;
-$--input-font-size: $--font-base;
+$--input-padding: 2px 6px !default;
+$--input-font-size: $--font-base !default;
 $--input-color: $--color-text !default;
 $--input-width: 100% !default;
 $--input-height: 30px !default;
 $--input-border: $--border-base !default;
 $--input-border-radius: $--border-radius-base !default;
-$--input-icon-width: 36px;
-$--input-hover-border: #999;
-$--input-focus-border: $--color-primary;
+$--input-icon-width: 36px !default;
+$--input-hover-border: #999 !default;
+$--input-focus-border: $--color-primary !default;
