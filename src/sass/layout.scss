@@ -11,8 +11,8 @@ $side-width: 30vw;
 @include b(layout) {
   > * {
     height: 100vh;
-    padding: none;
-    margin: none;
+    padding: 0;
+    margin: 0;
   }
   @include e(sidebar) {
     box-sizing: border-box;
@@ -27,10 +27,12 @@ $side-width: 30vw;
     margin-left: $side-width;
     background-color: $--background-color-base;
     border-left: $--border-gutter;
-    .lidis-layout__bg {
+    &::before {
+      content: '';
+      display: block;
       opacity: .2;
-      width: 100%;
-      height: 100vh;
+      width: calc(100% - #{$--padding-base});
+      height: calc(100vh - #{$--padding-base});
       position: absolute;
       z-index: 0;
       background-image: url('https://satania.moe/img/portraits/sadist.jpg');
