@@ -29,12 +29,13 @@ $side-width: 30vw;
     border-left: $--border-gutter;
     &::before {
       content: '';
-      display: block;
-      opacity: .2;
-      width: calc(100% - #{$--padding-base});
-      height: calc(100vh - #{$--padding-base});
       position: absolute;
+      top: 0; left: 0;
       z-index: 0;
+      display: block;
+      width: calc(100%);
+      height: calc(100vh);
+      opacity: .2;
       background-image: url('https://satania.moe/img/portraits/sadist.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
