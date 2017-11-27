@@ -16,6 +16,16 @@
     background-color: $--background-color-base;
     line-height: 1.6;
     resize: none;
+    background: inherit;
+    
+    &:hover {
+      border-color: $--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
   }
   &::before {
     @include popup;
