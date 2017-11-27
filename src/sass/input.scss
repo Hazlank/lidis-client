@@ -23,21 +23,23 @@
     }
 
     &:focus {
-      outline: none;
-      border-color: $--input-focus-border;
+        outline: none;
+        border-color: $--input-focus-border;
     }
   }
 
   @include e(icon) {
     position: absolute;
-    right: 0;
+    left: 2px;
     width: $--input-icon-width;
     line-height: $--input-height;
+    color: $--color-primary;
     text-align: center;
+    font-size: .8em;
     cursor: pointer;
 
     + .lidis-input__inner {
-      padding-right: $--input-icon-width;
+      padding-left: $--input-icon-width;
     }
   }
 }

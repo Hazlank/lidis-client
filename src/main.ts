@@ -7,6 +7,7 @@ import { createRouter } from './router';
 
 const layoutComponent = () => import('./components/layout').then(({ LayoutComponent }) => LayoutComponent);
 const searchComponent = () => import('./components/search').then(({ SearchComponent }) => SearchComponent);
+const editorComponent = () => import('./components/editor').then(({ EditorComponent }) => EditorComponent);
 
 
 import './sass/main.scss';
@@ -15,6 +16,7 @@ import { request } from 'http';
 if (process.env.ENV === 'development' && module.hot) {
   const layoutModuleId = './components/layout';
   const searchModuleId = './components/search';
+  const editorModuleId = './components/editor';
 
   // first arguments for `module.hot.accept` and `require` methods have to be static strings
   // see https://github.com/webpack/webpack/issues/5668
@@ -23,6 +25,9 @@ if (process.env.ENV === 'development' && module.hot) {
 
   makeHot(searchModuleId, searchComponent,
     module.hot.accept('./components/search', () => reload(searchModuleId, (<any>request('./components/search')).SearchComponent)));
+
+  makeHot(editorModuleId, editorComponent,
+    module.hot.accept('./components/editor', () => reload(editorModuleId, (<any>request('./components/editor')).EditorComponent)));
 }
 
 new Vue({
@@ -31,6 +36,7 @@ new Vue({
   router: createRouter(),
   components: {
     'layout': layoutComponent,
-    'search': searchComponent
+    'search': searchComponent,
+    'editor': editorComponent,
   }
 });

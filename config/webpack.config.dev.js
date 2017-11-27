@@ -36,7 +36,7 @@ webpackConfig.plugins = [...webpackConfig.plugins,
 ];
 
 webpackConfig.devServer = {
-  port: 8080,
+  port: 3131,
   host: 'localhost',
   historyApiFallback: true,
   watchOptions: {

@@ -40,4 +40,3 @@ export class SearchComponent extends Vue {
     console.log(`[Getter]  ${this.filterText}`);
   }
 }
-

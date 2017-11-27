@@ -52,7 +52,7 @@ $--input-width: 100% !default;
 $--input-height: 30px !default;
 $--input-border: $--border-base !default;
 $--input-border-radius: $--border-radius-base !default;
-$--input-icon-width: 36px !default;
+$--input-icon-width: 24px !default;
 $--input-hover-border: #999 !default;
 $--input-focus-border: $--color-primary !default;
 
@@ -64,24 +64,24 @@ $--input-focus-border: $--color-primary !default;
  $--key-zset-background: #fa5049;
  $--key-hash-background: #b865d0;
  $--key-str-background: #5dc936;
- 
+
  /**
   * Key Type Font Color
   */
   $--key-color: #ffffff;
- 
+
  /**
   * List title
   */
   $--list-title-color: #717171;
- 
- 
+
+
   /**
   * List index
   */
   $--list-index-color: #ffffff;
   $--list-index-background: #cccccc;
- 
+
   /**
   * List item background Color
   */
