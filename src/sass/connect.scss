@@ -1,0 +1,23 @@
+@import "mixin/bem";
+@import "common/var";
+
+
+@include b(connect) {
+  @include popup;
+
+  @include e(inner) {
+    // TODO: lidis-form
+    padding: 40px;
+    width: 400px;
+    height:300px;
+    background-color: $--background-color-popup;
+    border: $--border-base;
+    border-radius: $--border-radius-base;
+    margin: 0 auto;
+    margin-top: 200px;
+
+    .lidis-form-row + .lidis-form-row {
+      margin-top: 10px;
+    }
+  }
+}

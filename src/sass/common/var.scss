@@ -4,12 +4,15 @@
 $--color-primary: #ac87df !default;
 $--color-text: #333 !default;
 $--color-gutter: #ece7f0 !default;
+$--color-black: #000 !default;
 
 /**
  * Background
  */
 $--background-color-base: #fcfcfc !default;
 $--background-color-high: rgb(243, 243, 243) !default;
+$--background-color-mask: rgba($--color-black, .1) !default;
+$--background-color-popup: #fff !default;
 
 /**
  * 字号
