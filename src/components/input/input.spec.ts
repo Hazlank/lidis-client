@@ -5,15 +5,6 @@ import { ComponentTest } from '../../util/component-test';
 import { InputComponent } from './input';
 import { Vue } from 'vue/types/vue';
 
-@Component({
-  template: require('./input.html')
-})
-class MockInputComponent extends InputComponent {
-  constructor() {
-    super();
-  }
-}
-
 describe('Input component', () => {
   let directiveTest: ComponentTest;
   afterEach(() => {
@@ -27,7 +18,7 @@ describe('Input component', () => {
         :value="inputValue"
         placeholder="请输入内容"
       ></lidis-input>
-    `, { 'lidis-input': MockInputComponent });
+    `, { 'lidis-input': InputComponent });
 
     const vmOptions = {
       data () {
@@ -57,7 +48,7 @@ describe('Input component', () => {
   it ('should render search icon', async () => {
     directiveTest = new ComponentTest(`
       <lidis-input icon="search"></lidis-input>
-    `, { 'lidis-input': MockInputComponent });
+    `, { 'lidis-input': InputComponent });
 
     directiveTest.createComponent();
 
@@ -69,7 +60,7 @@ describe('Input component', () => {
   it ('events:focu,blur', async () => {
     directiveTest = new ComponentTest(`
       <lidis-input ref="input"></lidis-input>
-    `, { 'lidis-input': MockInputComponent });
+    `, { 'lidis-input': InputComponent });
 
     directiveTest.createComponent();
 
@@ -93,7 +84,7 @@ describe('Input component', () => {
   it ('events:change', async () => {
     directiveTest = new ComponentTest(`
       <lidis-input ref="input" :value="input"></lidis-input>
-    `, { 'lidis-input': MockInputComponent });
+    `, { 'lidis-input': InputComponent });
 
     directiveTest.createComponent({
       data() {

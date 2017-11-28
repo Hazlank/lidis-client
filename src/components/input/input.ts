@@ -20,7 +20,6 @@ export class InputComponent extends Vue {
 
   @Watch('value')
   private valueChange(newVal: string | number, oldVal: string | number) {
-    debugger
     this.setCurrentValue(newVal);
   }
 
