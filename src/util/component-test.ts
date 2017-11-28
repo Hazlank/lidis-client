@@ -22,6 +22,7 @@ export class ComponentTest {
     };
     if (createOptions) merge(options, createOptions);
     this.vm = new Vue(options).$mount();
+    document.body.appendChild(this.vm.$el);
   }
 
   public async execute(callback: (vm: Vue) => Promise<void> | void): Promise<void> {

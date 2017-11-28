@@ -1,0 +1,19 @@
+<div class="lidis-input">
+  <i
+    v-if="icon"
+    class="lidis-icon lidis-input__icon fa"
+    :class="'fa-'+icon"
+    aria-hidden="true"
+  >
+  </i>
+  <input
+    class="lidis-input__inner"
+    ref="input"
+    @blur="handleBlur"
+    @focus="handleFocus"
+    @input="handleInput"
+    @change="handleChange"
+    :placeholder="placeholder"
+    v-model="innerValue"
+  />
+</div>

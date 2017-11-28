@@ -1,11 +1,9 @@
 <div class="lidis-search">
-  <div class="lidis-input">
-    <i class="lidis-icon lidis-input__icon fa fa-search" aria-hidden="true"></i>
-    <input
-      class="lidis-input__inner"
-      placeholder="Filter"
-      spellcheck="false"
-      v-model="value"
-      @blur="submit(value)" />
-  </div>
+  <lidis-input
+    @blur="submit(value)"
+    @focus="handleFocus"
+    icon="search"
+    placeholder="Filter..."
+    v-model="value"
+  ></lidis-input>
 </div>

@@ -3,6 +3,7 @@ import Component from 'vue-class-component';
 
 import { Mutation, Getter } from 'vuex-class';
 import { Watch } from 'vue-property-decorator';
+import { InputComponent } from 'components/input';
 
 import {
   SET_FILTERTEXT
@@ -12,6 +13,9 @@ import {
 
 @Component({
   template: require('./search.html'),
+  components: {
+    'lidis-input': InputComponent
+  }
 })
 export class SearchComponent extends Vue {
 
@@ -27,6 +31,10 @@ export class SearchComponent extends Vue {
 
   public get history(): string[] {
     return Array.from(this.historySet);
+  }
+
+  private handleFocus () {
+    console.log('focus!');
   }
 
   private pushHistory(newVal) {
