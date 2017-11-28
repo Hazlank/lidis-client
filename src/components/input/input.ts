@@ -11,7 +11,7 @@ export class InputComponent extends Vue {
 
   @Prop({ type: [Number, String] })
   public readonly value: number | string ;
-  @Prop({ type: String })
+  @Prop({ type: String, default: 'text' })
   public readonly type: string;
   @Prop({ type: String })
   public readonly icon: string ;

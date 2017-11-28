@@ -1,1 +1,2 @@
 export const SET_FILTERTEXT = 'SET_FILTERTEXT';
+export const TOGGLE_CONNECT = 'TOGGLE_CONNECT';

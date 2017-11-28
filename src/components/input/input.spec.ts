@@ -39,6 +39,7 @@ describe('Input component', () => {
       expect(vm.$data.inputFocus).be.true;
       expect(inputElm.getAttribute('placeholder')).to.equal('请输入内容');
       expect(inputElm.value).to.equal('input');
+      expect(inputElm.type).to.equal('text');
       vm.$set(vm, 'inputValue', 'input2');
       await vm.$nextTick();
       expect(inputElm.value).to.equal('input2');

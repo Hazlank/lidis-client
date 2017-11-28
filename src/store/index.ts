@@ -18,7 +18,9 @@ if (typeof window === 'undefined' || !window.Vue) {
 
 const state: State = {
   // 用于更新视图的媒体对象
-  filterText: ''
+  filterText: '',
+  // 是否显示连接弹窗
+  showConnect: true
 };
 
 export const store = new Vuex.Store<State>({
