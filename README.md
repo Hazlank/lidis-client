@@ -1,5 +1,5 @@
 # lidis-client
-[![Build](https://circleci.com/gh/KasumiUtako/lidis-client.png?circle-token=:circle-token)](https://circleci.com/gh/KasumiUtako/lidis-client/tree/master)
+[![Build](https://circleci.com/gh/KasumiUtako/lidis-client.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/KasumiUtako/lidis-client/tree/master)
 
 > A Redis Client.
 
