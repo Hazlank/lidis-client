@@ -1,6 +1,7 @@
 # lidis-client
+[![Build](https://circleci.com/gh/KasumiUtako/lidis-client.png?circle-token=:circle-token)](https://circleci.com/gh/KasumiUtako/lidis-client/tree/master)
 
-> A Vue.js project
+> A Redis Client.
 
 ## Build Setup
 
