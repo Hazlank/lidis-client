@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import Component from 'vue-class-component';
 import { ComponentTest } from '../../util/component-test';
 import { InputComponent } from './input';
-import { Vue } from '.2.5.6@vue/types/vue';
+import { Vue } from 'vue/types/vue';
 
 @Component({
   template: require('./input.html')

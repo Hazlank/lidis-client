@@ -19,7 +19,8 @@ export class InputComponent extends Vue {
   public readonly placeholder: string ;
 
   @Watch('value')
-  private valueChange(newVal: string | number) {
+  private valueChange(newVal: string | number, oldVal: string | number) {
+    debugger
     this.setCurrentValue(newVal);
   }
 
