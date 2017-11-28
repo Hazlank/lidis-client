@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { Component } from 'vue';
 import { SinonSpy } from 'sinon';
 import merge from 'lodash.merge';
-import { ILogger } from './log';
+// import { ILogger } from './log';
 
 export interface IComponents {
   [key: string]: Component;
@@ -30,22 +30,26 @@ export class ComponentTest {
     await callback(this.vm);
   }
 
+  public destory(): void {
+    this.vm.$destroy();
+  }
+
 }
 
-export class MockLogger implements ILogger {
+// export class MockLogger implements ILogger {
 
-  constructor(private loggerSpy: SinonSpy) {
-  }
+//   constructor(private loggerSpy: SinonSpy) {
+//   }
 
-  info(msg: any) {
-    this.loggerSpy(msg);
-  }
+//   info(msg: any) {
+//     this.loggerSpy(msg);
+//   }
 
-  warn(msg: any) {
-    this.loggerSpy(msg);
-  }
+//   warn(msg: any) {
+//     this.loggerSpy(msg);
+//   }
 
-  error(msg: any) {
-    this.loggerSpy(msg);
-  }
-}
+//   error(msg: any) {
+//     this.loggerSpy(msg);
+//   }
+// }
