@@ -16,6 +16,11 @@
   color: $--button-color-base;
   background-color: $--button-fill-base;
 
+  // icon font
+  &.fa {
+    padding: 2px 4px;
+  }
+
   & + .lidis-button {
     margin-left: 5px;
   }
