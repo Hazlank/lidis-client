@@ -1,6 +1,9 @@
 <div class="lidis-list">
   <div class="lidis-list__header lidis-flex lidis-flex--between">
-    <div class="lidis-flex__item">Keys</div>
+    <div class="lidis-flex" style="width: 200px;">
+        <div style="flex: 0 1 80px;">Type</div>
+        <div class="lidis-flex__item">Name</div>
+    </div>
     <div><i class="lidis-button fa fa-plus"></i></div>
   </div>
   <div v-for="(_, idx) in 5" :key="idx" class="lidis-list__item">
