@@ -1,15 +1,15 @@
 <div class="lidis-list">
   <div class="lidis-list__header lidis-flex lidis-flex--between">
     <div class="lidis-flex" style="width: 200px;">
-        <div style="flex: 0 1 80px;">Type</div>
+        <div class="lidis-list__type">Type</div>
         <div class="lidis-flex__item">Name</div>
     </div>
     <div><i class="lidis-button fa fa-plus"></i></div>
   </div>
-  <div v-for="(_, idx) in 5" :key="idx" class="lidis-list__item">
-    <div class="lidis-flex" style="width: 200px;">
-        <div style="flex: 0 1 80px;">TYPE {{ idx }}</div>
-        <div class="lidis-flex__item">Name {{ idx }}</div>
+  <div v-for="(_, idx) in ['list','hash','zset','set','str']" :key="idx" class="lidis-list__item">
+    <div class="lidis-flex">
+        <div :class="'lidis-list__key is-'+_">{{ _ }}</div>
+        <div class="lidis-flex__item">Value {{ idx }}</div>
     </div>
   </div>
 </div>

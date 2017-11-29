@@ -6,17 +6,44 @@ $item-padding: 4px 10px;
 @include b(list) {
   border-bottom: $--border-gutter;
   @include e(header) {
-    background-color: $--background-color-high;
     line-height: 20px;
+    font-weight: 600;
     padding: $item-padding;
     border-bottom: $--border-gutter;
     box-shadow: 0 0 2px 0 rgba($--color-primary, .1);
+    background-color: $--background-color-high;
+  }
+  @include e(type) {
+    flex: 0 1 45px;
+    margin-right: 10px;
   }
   @include e(item) {
     padding: $item-padding;
     line-height: 20px;
     &:nth-child(2n + 1) {
       background-color: $--color-gutter;
+    }
+  }
+  @include e(key) {
+    flex: 0 1 45px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: $--key-color;
+    @include when(list) {
+     background: $--key-list-background;
+    }
+    @include when(hash) {
+      background: $--key-hash-background;
+    }
+    @include when(zset) {
+      background: $--key-zset-background;
+    }
+    @include when(set) {
+      background: $--key-set-background;
+    }
+    @include when(str) {
+      background: $--key-str-background;
     }
   }
 }
