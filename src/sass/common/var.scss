@@ -5,6 +5,7 @@ $--color-primary: #ac87df !default;
 $--color-text: #333 !default;
 $--color-gutter: #ece7f0 !default;
 $--color-black: #000 !default;
+$--color-white: #fff !default;
 
 /**
  * Background
@@ -43,11 +44,17 @@ $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
 
-
+/**
+ * Button
+ */
+$--button-fill-base: $--color-primary;
+$--button-color-base: $--color-white;
+$--button-border-radius-base: $--border-radius-base;
+// 可分成水平和垂直，后面弄成和input同高度，在表单中表现形式比较好
+$--button-padding-base: 6px 10px;
 /**
  * Input
  */
-
 $--input-padding: 2px 6px !default;
 $--input-font-size: $--font-base !default;
 $--input-color: $--color-text !default;

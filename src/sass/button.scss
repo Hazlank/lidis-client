@@ -1,0 +1,30 @@
+@import "mixin/bem";
+@import "common/var";
+
+@include b(button) {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+  outline: none;
+  border: none;
+  margin: 0;
+  transition: .1s;
+  font-size: 13px;
+  padding: $--button-padding-base;
+  border-radius: $--button-border-radius-base;
+  color: $--button-color-base;
+  background-color: $--button-fill-base;
+
+  & + .lidis-button {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    background-color: lighten($--button-fill-base, 8%);
+  }
+
+  &:active {
+    background-color: darken($--button-fill-base, 8%);
+  }
+}

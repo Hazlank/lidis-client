@@ -23,19 +23,19 @@ export class InputComponent extends Vue {
     this.setCurrentValue(newVal);
   }
 
-  private handleBlur (event) {
+  private handleBlur (event: FocusEvent) {
     this.$emit('blur', event);
   }
-  private handleFocus (event) {
+  private handleFocus (event: FocusEvent) {
     this.$emit('focus', event);
   }
-  private handleInput (event) {
-    const value = event.target.value;
+  private handleInput (event: Event) {
+    const value = (<HTMLInputElement>event.target).value;
     this.$emit('input', value);
     this.setCurrentValue(value);
   }
-  private handleChange (event) {
-    this.$emit('change', event.target.value);
+  private handleChange (event: Event) {
+    this.$emit('change', (<HTMLInputElement>event.target).value);
   }
 
   private setCurrentValue (value: string | number) {

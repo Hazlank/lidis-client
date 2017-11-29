@@ -9,7 +9,7 @@ export const mutations = {
   [SET_FILTERTEXT](state: State, filterText: string) {
     state.filterText = filterText;
   },
-  [TOGGLE_CONNECT](state: State, show: boolean) {
-    state.showConnect = show;
+  [TOGGLE_CONNECT](state: State) {
+    state.showConnect = !state.showConnect;
   }
 } as MutationTree<State>;

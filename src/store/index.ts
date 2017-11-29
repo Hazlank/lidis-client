@@ -20,7 +20,7 @@ const state: State = {
   // 用于更新视图的媒体对象
   filterText: '',
   // 是否显示连接弹窗
-  showConnect: true
+  showConnect: false
 };
 
 export const store = new Vuex.Store<State>({

@@ -1,0 +1,22 @@
+@import "common/var";
+@import "mixin/bem";
+
+$item-padding: 4px 10px;
+
+@include b(list) {
+  border-bottom: $--border-gutter;
+  @include e(header) {
+    background-color: $--background-color-high;
+    line-height: 20px;
+    padding: $item-padding;
+    border-bottom: $--border-gutter;
+    box-shadow: 0 0 2px 0 rgba($--color-primary, .1);
+  }
+  @include e(item) {
+    padding: $item-padding;
+    line-height: 20px;
+    &:nth-child(2n + 1) {
+      background-color: $--color-gutter;
+    }
+  }
+}

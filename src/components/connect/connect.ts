@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
+
+import { Mutation } from 'vuex-class';
 import { InputComponent } from 'components/input';
+import { TOGGLE_CONNECT } from 'store/types';
+
 
 @Component({
   template: require('./connect.html'),
@@ -9,8 +13,10 @@ import { InputComponent } from 'components/input';
   }
 })
 export class ConnectComponent extends Vue {
-  private host: string = '';
+  private host: string = '127.0.0.1';
+  private port: number = 6379;
 
-  private port: number = 0;
+  @Mutation(TOGGLE_CONNECT)
+  private toggle_connect: () => void;
 
 }

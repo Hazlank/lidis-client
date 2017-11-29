@@ -1,15 +1,7 @@
 <div class="lidis-layout">
   <div class="lidis-layout__sidebar">
     <div class="lidis-layout__searchbar"><slot name="search-bar"/></div>
-    <div class="lidis-layout__keylist">
-      <slot name="keys-manage">
-        <div>
-          <div class="lidis-layout__controller">Maybe Some Controller Here...</div>
-          <div v-for="_ in 5" class="lidis-layout__mocklist">
-          </div>
-        </div>
-      </slot>
-    </div>
+    <div class="lidis-layout__keylist"><slot name="keys-manage"></slot></div>
   </div>
   <div class="lidis-layout__panel"><slot name="editor">Show && Editor</slot></div>
 </div>

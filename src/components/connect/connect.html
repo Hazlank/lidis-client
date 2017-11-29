@@ -1,14 +1,16 @@
 <div class="lidis-connect">
-  <div class="lidis-connect__inner">
-    <div class="lidis-form-row">
+  <div class="lidis-connect__inner lidis-form">
+    <div class="lidis-form__item">
+      <h4>Connect Redis</h4>
+    </div>
+    <div class="lidis-form__item">
       <lidis-input placeholder="host" v-model="host"></lidis-input>
     </div>
-    <div class="lidis-form-row">
+    <div class="lidis-form__item">
       <lidis-input type="number" v-model.number="port" placeholder="port"></lidis-input>
     </div>
-    <div class="lidis-form-row">
-      <button>submit</button>
-      <button>close</button>
+    <div class="lidis-form__item lidis-form__submit">
+      <button class="lidis-button">Connect</button>
     </div>
   </div>
 </div>

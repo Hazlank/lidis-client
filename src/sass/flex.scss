@@ -1,0 +1,11 @@
+@import "mixin/bem";
+
+@include b(flex) {
+  display: flex;
+  @include e(item) {
+    flex: 0 1 100%;
+  }
+  @include m(between) {
+    justify-content: space-between;
+  }
+}
