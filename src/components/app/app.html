@@ -1,8 +1,13 @@
 <div>
   <layout>
     <search slot="search-bar"></search>
-    <editor slot="editor"></editor>
     <keys slot="keys-manage"></keys>
+    <div slot="panel" class="lidis-flex">
+      <div class="lidis-border__right">
+        <keys></keys>
+      </div>
+      <editor class="lidis-flex__item"></editor>
+    </div>
   </layout>
   <connect v-if="showConnect"></connect>
 </div>

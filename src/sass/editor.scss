@@ -4,13 +4,14 @@
 
 
 @include b(editor) {
+  padding: $--padding-base;
   position: relative;
-  height: 100%;
   @include e(inner) {
-    position: absolute;
+    box-sizing: border-box;
     padding: $--padding-base;
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
     border: $--input-border;
     border-radius: $--input-border-radius;
     background-color: $--background-color-base;

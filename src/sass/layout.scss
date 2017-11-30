@@ -6,14 +6,17 @@
 // 2. 各模块区域样式细调 [ing]
 // 3. 最小支持pad端的响应式 [wait]
 
-$side-width: 30vw;
+$side-width: 240px;
+
+%vhmax {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
 
 @include b(layout) {
-  background-color: $--background-color-base;
   > * {
-    height: 100vh;
-    padding: 0;
-    margin: 0;
+    @extend %vhmax;
   }
   @include e(sidebar) {
     box-sizing: border-box;
@@ -22,11 +25,10 @@ $side-width: 30vw;
   }
   @include e(panel) {
     position: relative;
-    box-sizing: border-box;
-    padding: $--padding-base;
     margin-left: $side-width;
-    background-color: $--background-color-high;
-    border-left: $--border-gutter;
+    > * {
+      @extend %vhmax;
+    }
   }
   @include e(searchbar) {
     padding: $--padding-base;
@@ -38,6 +40,12 @@ $side-width: 30vw;
   @include e(controller) {
     padding: 10px 20px;
     border-bottom: $--border-gutter;
+  }
+}
+
+@include b(border) {
+  @include e(right) {
+    border-right: $--border-gutter;
   }
 }
 
