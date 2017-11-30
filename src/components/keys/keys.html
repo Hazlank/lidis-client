@@ -1,3 +1,4 @@
+<!-- TODO: 此文件当做keys的业务文件, 提取一个list组件出来, 提供一个slot-scope和一个列头的配置prop -->
 <div class="lidis-list">
   <div class="lidis-list__header lidis-flex lidis-flex--between">
     <div class="lidis-flex" style="width: 200px;">
@@ -8,6 +9,10 @@
   </div>
   <div v-for="(_, idx) in ['list','hash','zset','set','str']" :key="idx" class="lidis-list__item">
     <div class="lidis-flex">
+        <!--
+          TODO: 这一块提取成slot-scope:
+          https://vuejs.org/v2/guide/components.html#Scoped-Slots
+         -->
         <div :class="'lidis-list__key is-'+_">{{ _ }}</div>
         <div class="lidis-flex__item">Value {{ idx }}</div>
     </div>
