@@ -1,39 +1,27 @@
-/**
- * 基本色调
- */
+// 基本色调
 $--color-primary: #ac87df !default;
 $--color-text: #333 !default;
 $--color-gutter: #ece7f0 !default;
 $--color-black: #000 !default;
 $--color-white: #fff !default;
 
-/**
- * Background
- */
+// Background
 $--background-color-base: #fcfcfc !default;
 $--background-color-high: rgb(243, 243, 243) !default;
 $--background-color-mask: rgba($--color-black, .1) !default;
 $--background-color-popup: #fff !default;
 
-/**
- * 字号
- */
+// 字号
 $--font-base-size: 13px !default;
 $--font-base: $--font-base-size !default;
 
-/**
- * 间距
- */
+// 间距
 $--padding-base: 4px;
 
-/**
- * 层级
- */
+// 层级
 $--index-popup: 99 !default;
 
-/**
- * Border
- */
+// Border
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
 $--border-color-base: #e4d8e5 !default;
@@ -44,17 +32,14 @@ $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
 
-/**
- * Button
- */
+// Button
 $--button-fill-base: $--color-primary;
 $--button-color-base: $--color-white;
 $--button-border-radius-base: $--border-radius-base;
 // 可分成水平和垂直，后面弄成和input同高度，在表单中表现形式比较好
 $--button-padding-base: 6px 10px;
-/**
- * Input
- */
+
+// Input
 $--input-padding: 2px 6px !default;
 $--input-font-size: $--font-base !default;
 $--input-color: $--color-text !default;
@@ -66,21 +51,15 @@ $--input-icon-width: 24px !default;
 $--input-hover-border: #999 !default;
 $--input-focus-border: $--color-primary !default;
 
-/**
- * Key Type Background Color
- */
+// Key Type Background Color
 $--key-list-background: #fca32a;
 $--key-hash-background: #b865d0;
 $--key-zset-background: #fa5049;
 $--key-set-background: #239ff2;
 $--key-str-background: #5dc936;
 
-/**
- * Key Type Font Color
- */
+// Key Type Font Color
 $--key-color: #ffffff;
 
-/**
- * List title
- */
+// List title
 $--list-title-color: #717171;
