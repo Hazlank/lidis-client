@@ -6,12 +6,16 @@
 @include b(editor) {
   padding: $--padding-base;
   position: relative;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
   @include e(inner) {
     box-sizing: border-box;
     padding: $--padding-base;
-    position: absolute;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
+    flex: 1;
+    z-index: 99;
+    font-size: 13px;
     border: $--input-border;
     border-radius: $--input-border-radius;
     background-color: $--background-color-base;
@@ -40,5 +44,27 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right bottom;
+  }
+}
+
+@include b(editor-line){
+  width: 45px;
+  text-align: right;
+  font-size: 13px;
+  overflow: hidden;
+  position: relative;
+  @include e(scroll) {
+    position: absolute;
+    padding: 4px 0;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
+    overflow-y: scroll;
+    & > p {
+      margin: 0 5px 0 0;
+      line-height: 1.6;
+      color: $--editor-lines-color;
+    }
   }
 }

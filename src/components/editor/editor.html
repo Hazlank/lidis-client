@@ -1,3 +1,8 @@
 <div class="lidis-editor">
-  <textarea class="lidis-editor__inner" spellcheck="false"></textarea>
+  <div class="lidis-editor-line">
+    <div class="lidis-editor-line__scroll">
+      <p v-for="i in lines">{{i}}</p>
+    </div>
+  </div>
+  <textarea @input="addLines" @scroll="scrollChange" class="lidis-editor__inner" spellcheck="false"></textarea>
 </div>
