@@ -9,7 +9,7 @@ export class EditorComponent extends Vue {
   private addLines (event: Event) {
     let textarea = this.$el.querySelector('textarea');
     let match = textarea.value.match(/\n/g);
-    this.lines = match ? match.length + 1 : this.lines;
+    this.lines = match ? match.length + 1 : 1;
     this.$nextTick(function() {
       let div = this.$el.querySelector('.lidis-editor-line__scroll');
       let p = div.querySelector('p');
