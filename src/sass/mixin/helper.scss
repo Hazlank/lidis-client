@@ -1,9 +1,17 @@
 @import '../common/var.scss';
 
-@mixin popup {
-  z-index: $--index-popup;
+%fill {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
+}
+
+@mixin popup {
+  z-index: $--index-popup;
+  @extend %fill;
+}
+
+@mixin absolute-fill {
+  @extend %fill;
 }
 
 @mixin pop-center {

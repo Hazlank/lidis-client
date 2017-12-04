@@ -1,8 +1,8 @@
 <div class="lidis-editor">
   <div class="lidis-editor-line">
-    <div class="lidis-editor-line__scroll">
-      <p v-for="i in lines">{{i}}</p>
+    <div ref="countContainer" class="lidis-editor-line__scroll">
+      <p v-for="number in numberOfRows">{{number}}</p>
     </div>
   </div>
-  <textarea @input="addLines" @scroll="scrollChange" class="lidis-editor__inner" spellcheck="false"></textarea>
+  <textarea ref="editor" @input="handleInput" @scroll="scrollChange" class="lidis-editor__inner" spellcheck="false"></textarea>
 </div>

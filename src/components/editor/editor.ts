@@ -5,22 +5,23 @@ import Component from 'vue-class-component';
   template: require('./editor.html'),
 })
 export class EditorComponent extends Vue {
-  lines: number = 1;
-  private addLines (event: Event) {
-    let textarea = this.$el.querySelector('textarea');
-    let match = textarea.value.match(/\n/g);
-    this.lines = match ? match.length + 1 : 1;
-    this.$nextTick(function() {
-      let div = this.$el.querySelector('.lidis-editor-line__scroll');
-      let p = div.querySelector('p');
-      div.scrollTo(0, textarea.scrollTop);
-    });
+
+  private numberOfRows: number = 1;
+
+  private handleInput (event: Event) {
+    const editor = this.$refs.editor as HTMLTextAreaElement;
+    const matchResult = editor.value.match(/\n/g) || '';
+    this.numberOfRows = matchResult.length + 1;
+    this.scrollToTop();
   }
+
   private scrollChange() {
-    this.$nextTick(function() {
-      let textarea = this.$el.querySelector('textarea');
-      let div = this.$el.querySelector('.lidis-editor-line__scroll');
-      div.scrollTo(0, textarea.scrollTop);
-    });
+    this.scrollToTop();
+  }
+
+  private async scrollToTop() {
+    await this.$nextTick();
+    const { countContainer: container, editor } = this.$refs;
+    (container as HTMLElement).scrollTo(0, (editor as HTMLTextAreaElement).scrollTop);
   }
 }

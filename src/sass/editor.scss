@@ -2,7 +2,6 @@
 @import "mixin/helper";
 @import "common/var";
 
-
 @include b(editor) {
   padding: $--padding-base;
   position: relative;
@@ -34,35 +33,36 @@
   }
   &::before {
     @include popup;
-    content: '';
+    content: "";
     z-index: 0;
     display: block;
     width: 100%;
     height: 100%;
-    opacity: .2;
-    background-image: url('https://satania.moe/img/portraits/sadist.jpg');
+    opacity: 0.2;
+    background-image: url("https://satania.moe/img/portraits/sadist.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right bottom;
   }
 }
 
-@include b(editor-line){
+@include b(editor-line) {
+  max-height: 100%;
   width: 45px;
   text-align: right;
   font-size: 13px;
-  overflow: hidden;
   position: relative;
   @include e(scroll) {
-    position: absolute;
-    padding: 4px 0;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
-    overflow-y: scroll;
+    overflow: hidden;
+    padding: $--padding-base;
+    @include absolute-fill;
+    /*
+      Increase/Decrease this value for cross-browser compatibility,
+      @fimars: `right: 0`在哪个浏览器下工作不正常吗?
+    */
     & > p {
-      margin: 0 5px 0 0;
+      margin: 0;
+      margin-right: 5px;
       line-height: 1.6;
       color: $--editor-lines-color;
     }
