@@ -3,6 +3,9 @@
 
 > A Redis Client.
 
+## Preview
+![Lidis](./media/preview.png)
+
 ## Build Setup
 
 ``` bash
