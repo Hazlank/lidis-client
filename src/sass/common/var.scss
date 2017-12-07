@@ -52,6 +52,7 @@ $--input-hover-border: #999 !default;
 $--input-focus-border: $--color-primary !default;
 
 // Key Type Background Color
+$--key-default-background: $--color-primary;
 $--key-list-background: #fca32a;
 $--key-hash-background: #b865d0;
 $--key-zset-background: #fa5049;

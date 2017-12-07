@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "axios": "~0.17.0",
+    "lodash.debounce": "^4.0.8",
     "vue": "~2.5.3",
     "vue-class-component": "~6.1.0",
     "vue-property-decorator": "~6.0.0",
@@ -35,6 +36,7 @@
     "vuex-class": "^0.3.0"
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.3",
     "@types/mocha": "~2.2.44",
     "@types/node": "~8.0.47",
     "@types/sinon": "~2.3.7",

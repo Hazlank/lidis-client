@@ -1,10 +1,20 @@
 <div>
   <layout>
     <search slot="search-bar"></search>
-    <keys slot="keys-manage"></keys>
+    <keys slot="keys-manage">
+      <template slot-scope="props">
+        <div class="lidis-list__key" :class="'is-' + props.type">{{ props.type }}</div>
+        <div class="lidis-flex__item">Value</div>
+      </template>
+    </keys>
     <div slot="panel" class="lidis-flex">
       <div class="lidis-border__right">
-        <keys></keys>
+        <keys>
+          <template slot-scope="props">
+            <div class="lidis-list__key">{{ props.idx }}</div>
+            <div class="lidis-flex__item">Value</div>
+          </template>
+        </keys>
       </div>
       <editor class="lidis-flex__item"></editor>
     </div>
