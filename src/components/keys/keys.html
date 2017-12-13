@@ -9,9 +9,9 @@
       <i class="lidis-button fa fa-plus"></i>
     </div>
   </div>
-  <div v-for="(value, idx) in keys" :key="idx" class="lidis-list__item">
+  <div v-for="(item, idx) in keys" :key="idx" class="lidis-list__item">
     <div class="lidis-flex">
-      <slot :value="value" :idx="idx"></slot>
+      <slot :item="item" :idx="idx"></slot>
     </div>
   </div>
 </div>

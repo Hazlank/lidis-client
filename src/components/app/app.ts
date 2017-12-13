@@ -30,6 +30,10 @@ export class App extends Vue {
   private async mounted() {
     const resp = await fetch('http://localhost:3132?cm=keys&args=*');
     const keys = await resp.json();
-    this.keys = keys;
+    this.keys = await Promise.all(keys.map(async (key) => {
+      const resp = await fetch('http://localhost:3132?cm=type&args=' + key);
+      const type = await resp.text();
+      return { key, type };
+    }));
   }
 }
