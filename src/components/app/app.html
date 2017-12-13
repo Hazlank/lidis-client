@@ -1,10 +1,10 @@
 <div>
   <layout>
     <search slot="search-bar"></search>
-    <keys slot="keys-manage">
+    <keys slot="keys-manage" :keys="keys">
       <template slot-scope="props">
-        <div class="lidis-list__key" :class="'is-' + props.type">{{ props.type }}</div>
-        <div class="lidis-flex__item">Value</div>
+        <div class="lidis-list__key" :class="'is-' + props.type">{{ props.idx }}</div>
+        <div class="lidis-flex__item">{{ props.value }}</div>
       </template>
     </keys>
     <div slot="panel" class="lidis-flex">

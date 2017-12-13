@@ -20,8 +20,16 @@ import { KeysComponent } from 'components/keys';
   }
 })
 export class App extends Vue {
+  private keys = [];
+
 
   @Getter('showConnect')
   private readonly showConnect: boolean;
 
+
+  private async mounted() {
+    const resp = await fetch('http://localhost:3132?cm=keys&args=*');
+    const keys = await resp.json();
+    this.keys = keys;
+  }
 }
