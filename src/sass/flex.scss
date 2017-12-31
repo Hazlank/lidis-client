@@ -1,5 +1,3 @@
-@import "mixin/bem";
-
 @include b(flex) {
   display: flex;
   @include e(item) {

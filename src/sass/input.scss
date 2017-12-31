@@ -1,7 +1,3 @@
-@import "mixin/bem";
-@import "common/var";
-
-
 @include b(input) {
   position: relative;
   display: inline-block;

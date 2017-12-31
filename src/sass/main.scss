@@ -1,3 +1,7 @@
+@import "./common/var",
+"mixin/bem",
+"mixin/helper";;
+
 // Components
 @import
   "./layout",
@@ -8,9 +12,6 @@
   "./editor",
   "./connect",
   "./list";
-
-@import "./common/var";
-
 
 html, body, #app-main {
   margin: 0; padding: 0;
